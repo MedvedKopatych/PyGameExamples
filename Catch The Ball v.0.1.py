@@ -1,5 +1,4 @@
 import pygame
-from pygame import mouse
 from pygame.draw import *
 from random import randint
 pygame.init()
@@ -15,6 +14,7 @@ MAGENTA = (255, 0, 255)
 CYAN = (0, 255, 255)
 BLACK = (0, 0, 0)
 COLORS = [RED, BLUE, YELLOW, GREEN, MAGENTA, CYAN]
+
 
 def new_ball():
     '''рисует новый шарик '''
