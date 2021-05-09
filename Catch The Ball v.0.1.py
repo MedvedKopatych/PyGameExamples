@@ -1,4 +1,5 @@
 import pygame
+from pygame import mouse
 from pygame.draw import *
 from random import randint
 pygame.init()
@@ -38,7 +39,13 @@ while not finished:
         if event.type == pygame.QUIT:
             finished = True
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            print('Click!')
+            pos = event.pos
+            evt_x = pos[0]
+            evt_y = pos[1]
+            if (evt_x - x)**2 + (evt_y - y)**2 <= r**2:
+                print('Click')
+            else:
+                print('Missed')
     new_ball()
     click(pygame.MOUSEBUTTONDOWN)
 
